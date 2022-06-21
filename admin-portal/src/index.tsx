@@ -4,15 +4,26 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import axios from "axios";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 axios.defaults.baseURL = process.env["REACT_APP_API"];
+
+if (process.env["REACT_APP_TEMP_TOKEN"]) {
+  axios.defaults.headers.common["API-Key"] =
+    process.env["REACT_APP_TEMP_TOKEN"];
+}
+
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
   </React.StrictMode>
 );
 
