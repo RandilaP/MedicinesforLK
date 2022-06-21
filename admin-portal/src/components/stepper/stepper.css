@@ -29,6 +29,7 @@
 
 .step.no-hover:hover {
   background-color: transparent;
+  color: var(--elixir-color-gray-900);
   cursor: default;
 }
 
