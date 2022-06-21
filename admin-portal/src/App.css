@@ -77,3 +77,19 @@ h6 {
   margin: var(--elixir-heading-margin-top) 0 var(--elixir-heading-margin-bottom)
     0;
 }
+
+button {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  background-color: var(--elixir-color-gray-200);
+  border-color: transparent;
+  cursor: pointer;
+  transition: all ease-in-out 150ms;
+  border-radius: 4px;
+  max-width: max-content;
+}
+
+button:hover {
+  background-color: var(--elixir-color-primary);
+  color: white;
+}
