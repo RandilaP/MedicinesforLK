@@ -1,0 +1,8 @@
+.reqTable-empty-statement {
+  text-align: center;
+}
+
+.requirementRow-supplierField {
+  display: flex;
+  gap: 0.5rem;
+}
